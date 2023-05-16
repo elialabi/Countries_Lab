@@ -1,9 +1,14 @@
 // In your JavaScript file, create a function which houses a fetch() request to the RESTCountries API and returns the response in JSON format
 
-const getCountries = async ()=> {
-    const countryResponse = await fetch ("https://restcountries.com/v3.1/all")
-    console.log(request);
+const getCountries = () => {
+     fetch ("https://restcountries.com/v3.1/all")
+     .then(response => response.json())
+     .then(data => console.log(data))
+     .catch(error => console.error(error));
 }
+
+getCountries();
+
     
 
 
